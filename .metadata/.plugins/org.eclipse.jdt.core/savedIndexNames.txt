@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+X:\Users\Fabian\Documents\GitHub\TribeDining\.metadata\.plugins\org.eclipse.jdt.core
