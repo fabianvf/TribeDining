@@ -30,7 +30,7 @@ public class GeneratingScreen extends Activity implements Runnable {
 	String time;
 	int day;
 	Thread generatethread;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -174,6 +174,17 @@ public class GeneratingScreen extends Activity implements Runnable {
         foodArray = days.get(day);
     	Intent intent = new Intent(this, FoodListDisplay.class);
     	intent.putStringArrayListExtra("foodarray", foodArray);
+    	
+    	SharedPreferences.Editor = getSharedPreferences("Food", 0).edit();
+    	String foodString = "";
+    	for(int i = 0; i < 7; i++){
+    		for(int j = 0; j < days[i].size(); j++){
+    			foodString += days[i][j];
+    			foodString += "|";
+    		}
+    		editor.putString(Integer.toString(i)
+    	}
+    	editor.commit();
     	startActivity(intent); 
         
         finish();
